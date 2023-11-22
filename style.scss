@@ -1,0 +1,91 @@
+@import "bootstrap/scss/bootstrap";
+@import "aos/dist/aos.css";
+
+:root {
+  --bs-body-bg: #cad2c5;
+
+  --color-dark: #2f3e46;
+  --color-light: #cad2c5;
+  --color-accent-1: #84a98c;
+  --color-accent-2: #52796f;
+  --color-accent-3: #354f52;
+
+  --color-text-light: #f6fff8;
+}
+
+.impressive-text {
+  h1 {
+    background-image: url("./public/low-poly-grid-haikei.svg");
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 15rem;
+    font-weight: bolder;
+    -webkit-animation: 15s stripes linear infinite;
+    animation: stripes 15s linear infinite;
+  }
+}
+
+@-webkit-keyframes stripes {
+  100% {
+    background-position: 0 -900px;
+  }
+}
+
+@keyframes stripes {
+  100% {
+    background-position: 0 -900px;
+  }
+}
+
+.full-screen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-darker {
+  background-color: var(--color-dark);
+  color: var(--color-text-light);
+}
+
+.bg-images {
+  padding-top: 30%;
+  padding-bottom: 30%;
+  background-image: url("./public/layered-waves-haikei.svg"),
+    url("./public/layered-waves-haikei\(1\).svg");
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-width: 0px;
+  background-color: var(--color-accent-3);
+  color: var(--color-text-light);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 1s ease-out, box-shadow 1s ease-out;
+
+  background-image: url("./public/layered-waves-haikei\(1\).svg");
+  background-position: bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  padding-bottom: 20%;
+
+  &:hover {
+    transform: translateY(-20px);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    padding-bottom: 13%;
+  }
+}
+
+.gap {
+  gap: 3rem;
+}
