@@ -19,11 +19,18 @@
 
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
     text-transform: uppercase;
-    font-size: 15rem;
+    font-size: 5rem;
     font-weight: bolder;
     -webkit-animation: 15s stripes linear infinite;
     animation: stripes 15s linear infinite;
+  }
+
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 15rem;
+    }
   }
 }
 
